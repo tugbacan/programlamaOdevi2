@@ -1,0 +1,27 @@
+def gelirHesapla(tSM):
+    global toplamGelir
+    toplamGelir=tSM
+    return toplamGelir
+def giderHesapla(hM,bOG,sG,sAHG):
+    global toplamGider
+    toplamGider=(hM+bOG+sG+sAHG)
+    return toplamGider
+def KDCiroHesapla(toplamGelir,toplamGider):
+    KDCiro=toplamGelir-toplamGider
+    if (KDCiro>1000):
+        print("Katma değer ciro yüksektir.")
+    elif (500<KDCiro<999):
+        print("Katma değer ciro normal.")
+    else:
+        print("Katma değer ciro düşük.")
+
+
+tSM=int(input("Toplam satış miktarını giriniz:"))
+hM=int(input("Hammadde maliyetini giriniz:"))
+bOG=int(input("Bakım onarım giderlerini giriniz:"))
+sG=int(input("Sevkiyat giderleriniz giriniz:"))
+sAHG=int(input("Satın alınan hizmet giderlerini giriniz:"))
+
+gelir=gelirHesapla(tSM)
+gider=giderHesapla(hM,bOG,sG,sAHG)
+KDCiroHesapla(gelir,gider)
