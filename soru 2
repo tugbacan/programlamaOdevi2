@@ -1,0 +1,18 @@
+def calismaSuresi2016 (calisilanSure=170, toplamMusteri=50):
+    global calismaSuresi
+    calismaSuresi=(calisilanSure/toplamMusteri)
+    return calismaSuresi
+def calismaSuresi2017 (calisilanSure2=220,toplamMusteri2=100):
+    global calismaSuresi2
+    calismaSuresi2=(calisilanSure2/toplamMusteri2)
+    return calismaSuresi2
+def farkHesapla (calismaSuresi,calismaSuresi2):
+    fark=calismaSuresi-calismaSuresi2
+    print("2017-2016 yılları müşterilerle calışma süreleri arasındaki fark:")
+    print(fark)
+
+
+sure2016=calismaSuresi2016(calisilanSure=170,toplamMusteri=50)
+sure2017=calismaSuresi2017(calisilanSure2=220,toplamMusteri2=100)
+farkHesapla(sure2016,sure2017)
+  
