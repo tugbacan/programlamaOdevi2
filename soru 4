@@ -1,0 +1,16 @@
+def donemBasi(koltuk=10,yatak=15,dolap=5):
+    global stokBasi
+    stokBasi=(koltuk+yatak+dolap)
+    return stokBasi
+def donemSonu(koltuk=25,yatak=20,dolap=10):
+    global stokSonu
+    stokSonu=(koltuk+yatak+dolap)
+    return stokSonu
+def ortalamaStok(stokBasi,stokSonu):
+    ortalama=(stokBasi+stokSonu)/2
+    print("Dönembaşı ve dönemsonu ortalama stok:")
+    print(ortalama)
+
+stok=donemBasi(koltuk=10,yatak=15,dolap=5)
+stok2=donemSonu(koltuk=25,yatak=20,dolap=10)
+ortalamaStok(stok,stok2)
