@@ -1,0 +1,44 @@
+def gelirHesaplaIlk(yazilimGeliri,finansmanGeliri,urunSatisGeliri):
+    global ilkGelir
+    ilkGelir=(yazilimGeliri+finansmanGeliri+urunSatisGeliri)
+    return ilkGelir
+def giderHesaplaIlk(calisanMaaslari,kiraGideri,donanimMaliyeti):
+    global ilkGider
+    ilkGider=(calisanMaaslari+kiraGideri+donanimMaliyeti)
+    return ilkGider
+def gelirHesaplaSon(yazilimGeliri2,sponsorlukGeliri,eTicaretGeliri,urunSatisGeliri2):
+    global sonGelir
+    sonGelir=(yazilimGeliri2+sponsorlukGeliri+eTicaretGeliri+urunSatisGeliri2)
+    return sonGelir
+def giderHesaplaSon(calisanMaaslari2,kiraGideri2,bakimMaliyeti):
+    global sonGider
+    sonGider=(calisanMaaslari2+kiraGideri2+bakimMaliyeti)
+    return sonGider
+def karHesapla(ilkGelir,ilkGider,sonGelir,sonGider):
+    kar=(ilkGelir-ilkGider)-(sonGelir-sonGider)
+    if(kar>5000):
+        print("İşletme çok karlı.")
+    elif(1000<kar<5000):
+        print("İşletme karı normal.")
+    else:
+        print("İşletme karı yoktur.")
+
+yazilimGeliri=int(input("Yazılım gelirini giriniz:"))
+finansmanGeliri=int(input("Finansman gelirini giriniz:"))
+urunSatisGeliri=int(input("Ürün satış gelirini giriniz:"))
+yazilimGeliri2=int(input("Yazılım Geliri2'yi giriniz:"))
+sponsorlukGeliri=int(input("Sponsourluk gelirini giriniz:"))
+eTicaretGeliri=int(input("E ticaret geliriniz giriniz:"))
+urunSatisGeliri2=int(input("Ürün satış geliri2'yi giriniz:"))
+calisanMaaslari=int(input("Çalışan maaşlarını giriniz:"))
+kiraGideri=int(input("Kira giderini giriniz:"))
+donanimMaliyeti=int(input("Donanım maliyetini giriniz:"))
+calisanMaaslari2=int(input("Çalışan maaşları2'yi giriniz:"))
+kiraGideri2=int(input("Kira gider2'yi giriniz:"))
+bakimMaliyeti=int(input("Bakım maliyetini giriniz:"))
+
+gelir1=gelirHesaplaIlk(yazilimGeliri,finansmanGeliri,urunSatisGeliri)
+gider1=giderHesaplaIlk(calisanMaaslari,kiraGideri,donanimMaliyeti)
+gelir2=gelirHesaplaSon(yazilimGeliri2,sponsorlukGeliri,eTicaretGeliri,urunSatisGeliri2)
+gider2=giderHesaplaSon(calisanMaaslari2,kiraGideri2,bakimMaliyeti)
+karHesapla(gelir1,gider1,gelir2,gider2)
